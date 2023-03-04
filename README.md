@@ -9,7 +9,7 @@ A short example is provided in the jupyter notebook example.ipynb
 
 - Clone the repo
 - cd to the repo directory
-- Install requirements with pip install requirements.txt
+- Install the requirements with `pip install -r requirements.txt`
 
 you can run the module with a command line as described below
 

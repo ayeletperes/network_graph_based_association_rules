@@ -21,9 +21,9 @@ import networkx as nx # add to requirements
 from tqdm.auto import tqdm # add to requirements
 from multiprocessing import Pool
 # import from modules
-from src.data_processing import genotypeData
-from src.rules_creation import rulesMining
-from src.network_model import rulesNetwork
+from data_processing import genotypeData
+from rules_creation import rulesMining
+from network_model import rulesNetwork
 
 def parse_args():
     parser = argparse.ArgumentParser()
@@ -53,7 +53,7 @@ def main():
     else:
         raise ValueError(" ".join(['subject','status'])+" are required in the metadata table")
 
-    gd = genotypeData(path, file_pattern, d_metadata)
+    gd = genotypeData(path, d_metadata, file_pattern)
 
     # get the files
     files = gd.list_files()
